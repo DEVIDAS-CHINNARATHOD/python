@@ -1,0 +1,54 @@
+fruits = ["apple", "banana", "mango", "orange"]
+
+print("1. Simple for loop:")
+for fruit in fruits:
+    print(f" - I like {fruit}")
+print()
+
+print("2. For loop with index (using range):")
+for i in range(len(fruits)):
+    print(f" - Fruit {i + 1}: {fruits[i]}")
+print()
+
+print("3. Using enumerate() to get index and value:")
+for index, fruit in enumerate(fruits, start=1):
+    print(f" - #{index}: {fruit}")
+print()
+
+prices = [100, 40, 60, 30]
+print("4. Looping through two lists together (zip):")
+for fruit, price in zip(fruits, prices):
+    print(f" - {fruit.title()} costs ₹{price}")
+print()
+
+fruit_colors = [["apple", "red"], ["banana", "yellow"], ["mango", "orange"]]
+print("5. Nested for loop:")
+for pair in fruit_colors:
+    for item in pair:
+        print(item, end="  ")
+    print()
+print()
+
+print("6. For loop with condition (filtering items):")
+for fruit in fruits:
+    if "a" in fruit:
+        print(f" - {fruit} has the letter 'a'")
+print()
+
+print("7. List comprehension:")
+uppercase_fruits = [fruit.upper() for fruit in fruits]
+print(" - Uppercase fruits:", uppercase_fruits)
+print()
+
+print("8. Using break and continue:")
+for fruit in fruits:
+    if fruit == "mango":
+        print(" - Mango found! Stopping loop.")
+        break
+    if fruit == "banana":
+        print(" - Skipping banana.")
+        continue
+    print(f" - {fruit} checked.")
+print()
+
+print("✅ All for loop variations demonstrated successfully!")
