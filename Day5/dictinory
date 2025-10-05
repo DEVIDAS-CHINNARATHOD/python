@@ -1,0 +1,37 @@
+student = {
+    "name": "Devidas",
+    "age": 20,
+    "course": "Computer Science",
+    "marks": 88
+}
+
+print("Original Dictionary:")
+print(student)
+
+print("\nAccessing individual items:")
+print("Name:", student["name"])
+print("Course:", student.get("course"))
+
+student["college"] = "VTU"
+print("\nAfter adding college:")
+print(student)
+
+student["marks"] = 92
+print("\nAfter updating marks:")
+print(student)
+
+removed = student.pop("age")
+print("\nRemoved 'age':", removed)
+print("After removal:", student)
+
+print("\nLooping through keys and values:")
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+if "course" in student:
+    print("\nKey 'course' exists in the dictionary")
+
+print("\nNumber of items in dictionary:", len(student))
+
+student.clear()
+print("\nAfter clearing dictionary:", student)
